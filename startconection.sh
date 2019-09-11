@@ -5,9 +5,9 @@
 PASS=$1
 PASSR=$2
 
-for ip_offline in NameHost.io 127.0.0.1
+for ip_HostConection in NameHost.io 127.0.0.1
 do
 
-konsole --hold --new-tab -e $SHELL -c "echo $PASSR ;  sshpass -p $PASS ssh -o StrictHostKeyChecking=no sysadmin@$ip_offline" &
+konsole --hold --new-tab -e $SHELL -c "echo $PASSR ;  sshpass -p $PASS ssh -o StrictHostKeyChecking=no user@$ip_HostConection" &
 done
 wait
